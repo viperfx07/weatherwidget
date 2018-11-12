@@ -1,4 +1,4 @@
-# Weather widget
+# Weather Widget
 
 Generated on 2018-11-12 using
 [generator-boilerplatev@2.2.5](https://github.com/viperfx07/generator-boilerplatev)
@@ -8,11 +8,11 @@ Generated on 2018-11-12 using
 - The main app is built using React which enables to create reusable components as building blocks of our apps.
 - Inside js folder, it contains two folders, **components** and **utils**
 - **components** is divided into 
-	a. *base* which contains for basic/dumb components
-	b. other folders are for smart components, i.e. WeatherWidget
+	* **base** which contains for basic/dumb components
+	* other folders are for smart components, i.e. WeatherWidget
 - **utils** contains re-usable methods
 - **components** and **utils** are separated into different folders and files to easily manage, re-use and test, i.e. unit-testing.
-- One interesting function worth mentioned is called (**sureThing**)[https://medium.com/@jesterxl/easier-error-handling-using-async-await-b9ab0cb938e] by Jaison Kaiser. Usually, when we use Promise, we have to prepare a try and catch block, that will catch the error thrown from the reject callback. However, to simplify it, instead of rejecting, we always use a resolve to return an object which contains the status of the response and data or error when it's succesful or failed request.
+- One interesting function worth mentioned is called (**sureThing**)[https://medium.com/@jesterxl/easier-error-handling-using-async-await-b9ab0cb938e] by Jaison Kaiser. Usually, when we use Promise, we have to prepare a try and catch block, that will catch the error thrown from the reject callback. However, to simplify it, instead of rejecting, we always use a resolve to return an object which contains the status of the response and data or error when it's successful or failed request.
 
 ## Assumptions
 * Use the weather icon pack from OpenWeather which is different from the design provided
