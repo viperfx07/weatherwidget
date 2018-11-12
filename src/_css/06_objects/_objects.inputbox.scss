@@ -1,0 +1,63 @@
+.o-inputbox{
+	$_this: &;
+	&__box{
+		width: 1rem;
+		height: 1rem;
+		border: 1px solid $border;
+		top: 2px;
+		/* crit */
+
+		input[type="radio"] ~ &{
+			border-radius: 50%;
+			/* crit */
+		}
+
+		&:before{
+			@include icon(check);
+			@include absolute-center;
+			line-height: 1rem;
+			color: #fff;
+			opacity: 0;
+			/* crit */
+
+			input[type="radio"] & {
+				content: '';
+				background-color: #fff;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				/* crit */
+			}
+		}
+
+		input:checked ~ &, .is-selected &{
+			background-color: #fff;
+			border-color: $primary;
+			border-width: #{(5/16)}rem;
+			/* crit */
+
+			&:before{
+				opacity: 1;
+				/* crit */
+			}
+			input:disabled~& {
+				opacity: .4;
+				/* crit */
+			}
+		}
+
+		input:focus ~ &{
+			border-color: $primary;
+		}
+
+		input:disabled~& {
+			opacity: .4;
+			/* crit */
+		}
+	}
+	&__text{
+		input:disabled~& {
+			opacity: .4;
+		}
+	}
+}
